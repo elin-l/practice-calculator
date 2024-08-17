@@ -27,7 +27,7 @@ def run(action):
 
 
 def velocity_formula():
-    answer = input("what do you want to know?")
+    answer = input("what do you want to know? \n>>>")
     if answer == "time":
         time()
 
@@ -41,21 +41,21 @@ def velocity_formula():
         print("You stupid.")
 
 def time():
-    velocity = float(input("enter velocity"))
-    displacement = float(input("enter displacement"))
+    velocity = float(input("enter velocity \n>>>"))
+    displacement = float(input("enter displacement \n>>>"))
     answer = displacement / velocity
     print(answer)
 
 
 def velocity():
-    time = float(input("Enter time"))
-    displacement = float(input("enter displacement"))
+    time = float(input("Enter time \n>>>"))
+    displacement = float(input("enter displacement \n>>>"))
     answer = displacement / time
     print(answer)
 
 def displacement():
-    time = float(input("Enter time"))
-    velocity = float(input("enter velocity"))
+    time = float(input("Enter time \n>>>"))
+    velocity = float(input("enter velocity \n>>>"))
     answer = time * velocity
     print(answer)
 
@@ -91,7 +91,7 @@ def Division():
 def Average():
     num_list = []
     while True:
-        num = input("Insert numbers")
+        num = input("Insert numbers \n>>>")
         if num == "no more":
             break
         else:
@@ -111,7 +111,7 @@ def Average2():
     num = 0
     length = 0
     while True:
-        ip = input("Insert numbers")
+        ip = input("Insert numbers \n>>>")
         if ip == "no more":
             break
         else:
@@ -121,21 +121,21 @@ def Average2():
     print(answer)
 
 def slope():
-    x1 = float(input("Enter an x1 coordinate: "))
-    y1 = float(input("Enter an y1 coordinate: "))
-    x2 = float(input("Enter an x2 coordinate: "))
-    y2 = float(input("Enter an y2 coordinate: "))
+    x1 = float(input("Enter an x1 coordinate: \n>>>"))
+    y1 = float(input("Enter an y1 coordinate: \n>>>"))
+    x2 = float(input("Enter an x2 coordinate: \n>>>"))
+    y2 = float(input("Enter an y2 coordinate: \n>>>"))
     m = (y2 - y1) / (x2 - x1)
     print(m)
 
 def slope2():
-    p1 = input("coordinate(x1, y1): ").split()
+    p1 = input("coordinate(x1, y1): \n>>>").split()
     for i in range(2):
         p1[i] = float(p1[i])
         x1 = p1[0]
         y1 = p1[1]
 
-    p2 = input("coordinate(x2, y2): ").split()
+    p2 = input("coordinate(x2, y2): \n>>>").split()
     for i in range(2):
         p2[i] = float(p2[i])
         x2 = p2[0]
@@ -144,9 +144,7 @@ def slope2():
     print(m)
 
 
-
-
 def ask_two_numbers():
-    number1 = input("first number?")
-    number2 = input("second number?")
+    number1 = input("first number? \n>>>")
+    number2 = input("second number? \n>>>")
     return number1, number2
