@@ -1,0 +1,152 @@
+def run(action):
+    if action == "addition":
+        Addition()
+
+    elif action == "subtraction":
+        Subtraction()
+
+    elif action == "multiplication":
+        Multiplication()
+
+    elif action == "division":
+        Division()
+
+    elif action == "average":
+        # Average()
+        Average2()
+
+    elif action == "slope":
+        #slope()
+        slope2()
+
+    elif action == "velocity formula":
+        velocity_formula()
+
+    else:
+        print("You stupid.")
+
+
+def velocity_formula():
+    answer = input("what do you want to know?")
+    if answer == "time":
+        time()
+
+    elif answer == "velocity":
+        velocity()
+
+    elif answer == "displacement":
+        displacement()
+
+    else:
+        print("You stupid.")
+
+def time():
+    velocity = float(input("enter velocity"))
+    displacement = float(input("enter displacement"))
+    answer = displacement / velocity
+    print(answer)
+
+
+def velocity():
+    time = float(input("Enter time"))
+    displacement = float(input("enter displacement"))
+    answer = displacement / time
+    print(answer)
+
+def displacement():
+    time = float(input("Enter time"))
+    velocity = float(input("enter velocity"))
+    answer = time * velocity
+    print(answer)
+
+
+def Addition():
+    number1, number2 = ask_two_numbers()
+
+    answer = float(number1) + float(number2)
+    print(answer)
+
+
+def Subtraction():
+    number1, number2 = ask_two_numbers()
+
+    answer = float(number1) - float(number2)
+    print(answer)
+
+
+def Multiplication():
+    number1, number2 = ask_two_numbers()
+
+    answer = float(number1) * float(number2)
+    print(answer)
+
+
+def Division():
+    number1, number2 = ask_two_numbers()
+
+    answer = float(number1) / float(number2)
+    print(answer)
+
+
+def Average():
+    num_list = []
+    while True:
+        num = input("Insert numbers")
+        if num == "no more":
+            break
+        else:
+            num_list.append(float(num))
+
+    sum = 0
+    for x in num_list:
+        sum = sum + x
+
+    total = len(num_list)
+
+    answer = sum / total
+    print(answer)
+
+
+def Average2():
+    num = 0
+    length = 0
+    while True:
+        ip = input("Insert numbers")
+        if ip == "no more":
+            break
+        else:
+            num += float(ip)
+            length += 1
+    answer = num / length
+    print(answer)
+
+def slope():
+    x1 = float(input("Enter an x1 coordinate: "))
+    y1 = float(input("Enter an y1 coordinate: "))
+    x2 = float(input("Enter an x2 coordinate: "))
+    y2 = float(input("Enter an y2 coordinate: "))
+    m = (y2 - y1) / (x2 - x1)
+    print(m)
+
+def slope2():
+    p1 = input("coordinate(x1, y1): ").split()
+    for i in range(2):
+        p1[i] = float(p1[i])
+        x1 = p1[0]
+        y1 = p1[1]
+
+    p2 = input("coordinate(x2, y2): ").split()
+    for i in range(2):
+        p2[i] = float(p2[i])
+        x2 = p2[0]
+        y2 = p2[1]
+    m = (y2 - y1) / (x2 - x1)
+    print(m)
+
+
+
+
+def ask_two_numbers():
+    number1 = input("first number?")
+    number2 = input("second number?")
+    return number1, number2
