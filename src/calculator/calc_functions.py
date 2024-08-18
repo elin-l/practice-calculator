@@ -13,17 +13,17 @@ def run(action):
 
     elif action == "average":
         # Average()
-        Average2()
+        Average()
 
     elif action == "slope":
         #slope()
-        slope2()
+        slope()
 
     elif action == "velocity formula":
         velocity_formula()
 
     else:
-        print("You stupid.")
+        print("What do you mean," + action + "?")
 
 
 def velocity_formula():
@@ -91,7 +91,7 @@ def Division():
 def Average():
     num_list = []
     while True:
-        num = input("Insert numbers \n>>>")
+        num = input("Insert numbers. \nType no more to get an average. \n>>>")
         if num == "no more":
             break
         else:
@@ -111,7 +111,7 @@ def Average2():
     num = 0
     length = 0
     while True:
-        ip = input("Insert numbers \n>>>")
+        ip = input("Insert numbers. \nType no more to get an average. \n>>>")
         if ip == "no more":
             break
         else:
@@ -148,3 +148,4 @@ def ask_two_numbers():
     number1 = input("first number? \n>>>")
     number2 = input("second number? \n>>>")
     return number1, number2
+

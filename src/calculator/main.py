@@ -1,9 +1,12 @@
 import calc_functions
 
+options = ["Addition", "Subtraction", "Multiplication", "Division", "Average", "Slope", "Velocity formula"]
+
+print("Hello. Welcome to the practice calculator.")
+
 while True:
 
-    print("Hello, welcome to the calculator. What would you like to do?")
-    options = ["Addition", "Subtraction", "Multiplication", "Division", "Average", "Slope"]
+    print("What would you like to do?")
     print(options)
     action = input("What do you want to do? \nType end to close the app. \n>>>").lower()
 
@@ -12,7 +15,6 @@ while True:
         break
     else:
         calc_functions.run(action)
-
 
 print("Good bye.")
 
